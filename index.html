@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini calendar</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="calendar">
+        <div class="left">
+            <p id="date">4</p>
+            <p id="day">Thursday</p>
+        </div>
+        <div class="right">
+            <p id="month">January</p>
+            <p id="year">2020</p>
+        </div>
+    </div>
+    
+    <script>
+        const date=document.getElementById("date");
+        const day=document.getElementById("day");
+        const month=document.getElementById("month");
+        const year=document.getElementById("year");
+
+        const today=new Date();
+        const weakday=["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+        const yearmonth=["January","February","March","April","May","June","July","August","October","November","December"];
+        
+        date.innerHTML=today.getDate();
+        day.innerHTML=weakday[today.getDay()];
+        month.innerHTML=yearmonth[today.getMonth()];
+        year.innerHTML=today.getFullYear();
+    </script>
+</body>
+</html>
